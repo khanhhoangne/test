@@ -14,7 +14,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('path.public', function () {
-            dd(base_path());
             return env('APP_URL'). '/public';
         });
     }
